@@ -1,0 +1,57 @@
+.mask{
+    position: fixed;
+    width:100%;
+    height: 100%;
+    left:0;
+    top:0;
+    background-color: rgba(0,0,0,0);
+    z-index: 10;
+    transition: background-color .5s;
+    pointer-events: none;
+}
+.mask.active{
+    background-color: rgba(0,0,0,.5);
+    pointer-events: initial;
+}
+.mask .wrap{
+    position: absolute;
+    width:100%;
+    height: 40%;
+    left:0;
+    bottom:0;
+    background-color:#fff;
+    transform: translateY(100%);
+    transition: transform .5s;
+    z-index: 100;
+}
+.mask .wrap.active{
+    transform: translateY(0);
+}
+.tit{
+    width:100%;
+    border-bottom: solid 1px #ededed;
+    padding:20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.content{
+    padding:20px;
+
+
+}
+.content>div{
+    display: flex;
+    flex-wrap: wrap;
+}
+.content>div span{
+    min-width: 30%;
+    line-height: 30px;
+    border:solid 1px #ededed;
+    margin: 5px 4px;
+    text-align: center;
+}
+.content>div span.active{
+    border:solid 1px green; 
+    color:green;
+}
